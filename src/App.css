@@ -25,7 +25,8 @@
 }
 
 .todo-list {
-  width: fit-content;
+  width: 100%;
+  text-align: left;
 }
 
 .todo-form span {
@@ -34,5 +35,9 @@
 }
 
 .todo-form input {
-  width: 80%;
+  width: 88%;
+}
+
+.todo-form button {
+  width: 10%;
 }

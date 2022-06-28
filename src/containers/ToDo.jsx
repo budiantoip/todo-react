@@ -4,11 +4,17 @@ import ToDoForm from '../components/ToDoForm';
 import ToDoList from '../components/ToDoList';
 
 const ToDo = () => {
+  const [todos, setTodos] = React.useState([]);
+
+  const handleClick = (todo) => {
+    setTodos([...todos, todo]);
+  }
+
   return (
     <div className='todo'>
       <h2 className='title'>To-Do List</h2>
-      <ToDoForm />
-      <ToDoList />
+      <ToDoForm handleClick={handleClick}/>
+      <ToDoList todos={todos}/>
     </div>
   );
 };
